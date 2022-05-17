@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	<!-- Font css link -->
+	<link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+		/*===========================================
+			Header CSS Start
+		===========================================*/
+			html {
+			  -webkit-box-sizing: border-box;
+			  -moz-box-sizing: border-box;
+			  box-sizing: border-box; 
+			}
+			*, *:before, *:after {
+			  -webkit-box-sizing: inherit;
+			  -moz-box-sizing: inherit;
+			  box-sizing: inherit;
+		  	} 
+		  	img{
+		  		max-width: 100%;
+		  	}
+			body{
+				margin: 0;
+			}
+			header{
+				padding: 0 70px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				z-index: 2;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+			.main-header{
+				display: inline-block;
+				width: 100%;
+				padding: 22px 0;
+			}
+			.logo{
+				display: inline-block;
+			}
+			.logo a{
+				color: #fff;
+				font-size:48px;
+			}
+			.menu{
+				float: right;
+				display: inline-block;
+			}
+			.menu > ul{
+				margin: 0;
+				padding: 0;
+			}
+			.menu > ul > li{
+				display: inline-block;
+				padding: 31px 14.5px;
+				position: relative;
+			}
+			.menu > ul > li > a{
+				color: white;
+				text-decoration: none;
+			}
+			.menu > ul > li > a:hover{
+				color: #b26e30;
+			}
+			.menu > ul > li > ul{
+				display: none;
+				position: absolute;
+				padding: 0;
+				list-style: none;
+				top: 100%;
+				width: 150px;
+				background-color: red;
+			}
+			.menu > ul > li:hover > ul,
+			.menu > ul > li > ul > li:hover > ul,
+			.menu > ul > li > ul > li > ul > li:hover > ul{
+				display: block;
+			}
+			.menu > ul > li > ul > li,
+			.menu > ul > li > ul > li > ul > li,
+			.menu > ul > li > ul > li > ul > li > ul > li{
+				display: inline-block;
+				padding: 10px;
+				width: 100%;
+				position: relative;
+			}
+			.menu > ul > li > ul > li > a,
+			.menu > ul > li > ul > li > ul > li > a,
+			.menu > ul > li > ul > li > ul > li > ul > li > a{
+				color: black;
+			}
+			.menu > ul > li > ul > li > ul,
+			.menu > ul > li > ul > li > ul > li > ul{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				left: 100%;
+				top: 0;
+				width: 100%;
+				display: none;
+				position: absolute;
+				background-color: green;
+			}
+			.container{
+				max-width: 1140px;
+				margin: 0 auto;
+			}
+
+		/*===========================================
+			Header CSS End
+		===========================================*/
+
+
+		/*===========================================
+			Home page CSS Start
+		===========================================*/
+
+			/*  Main Banner css start
+			======================================*/
+				.main-banner{
+					background-image: url(image/main-banner-background.png);
+					text-align: center;
+					padding: 316px 0 314px;
+					background-position: center center;
+					background-size: cover;
+					position: relative;
+					z-index: 1;
+				}
+				.main-banner:after, 
+				.our-story .image:after,
+				.our-services-section:after{
+					position: absolute;
+					right: 0;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					background-color: rgba(0, 0, 0, 0.50);
+					z-index: -1;
+					content: "";
+				}
+				.main-banner h2{
+					color: #fff;
+					margin: 0 0 25px;
+					font-size: 70px;
+					font-family: 'Sofia', cursive;
+					font-weight: 400;
+				}
+				.main-banner p{
+					color: #fff;
+					font-size: 20px;
+					margin: 25px 0 0;
+					font-family: 'Open Sans', sans-serif;
+					letter-spacing: 2px;
+				}
+
+			/*  Our Story css start
+			======================================*/
+				.our-story-section{
+					padding: 80px 0 100px;
+					display: inline-block;
+					width: 100%;
+				}
+				section h2{
+					margin: 0 0 100px;
+					text-align: center;
+					font-family: 'Sofia', cursive;
+					font-weight: 400;
+					font-size: 50px;
+				}
+				.our-story, .service-list {
+				    text-align: center;
+				    display: block;
+				    margin: 0 -15px;
+				}
+				.our-story .image, 
+				.our-story .details,
+				.service-list .service{
+					position: relative;
+					z-index: 1;
+					width: 33.33%;
+					float: left;
+					padding: 0 15px;
+				}
+				.our-story .image:after{
+					z-index: 2;
+					left: 15px;
+					right: 15px;
+				}
+
+			/*  Our Service css start
+			======================================*/
+				.our-services-section{
+					background-image: url(image/our-services-backgorund.png);
+					background-size: cover;
+					background-repeat: no-repeat;
+					position: relative;	
+					z-index: 1;		
+					text-align: center;	
+					padding: 120px 0 170px;
+					display: inline-block;
+					width: 100%;
+				}
+				.our-services-section:after{
+					background-color: rgba(0, 0, 0, 0.7);
+				}
+				.our-services-section h2,
+				.our-services-section h3, 
+				.our-services-section p{
+					color: #fff;
+				}
+
+		/*===========================================
+			About page CSS Start
+		===========================================*/
+	</style>
+</head>
+<body>
+	<!-- Header Start -->
+	<header>
+		<div class="main-header">
+			<div class="logo">
+				<a href="#">Logo</a>
+			</div>
+			<nav class="menu"> 
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li>
+						<a href="#our_menu">Menu</a>
+						<ul>
+							<li><a href="#">Menu 1</a></li>
+							<li><a href="#">Menu 2</a></li>
+							<li><a href="#">Menu 3</a></li>
+							<li>
+								<a href="#">Menu 4</a>
+								<ul>
+									<li><a href="#">Menu 11</a></li>
+									<li><a href="#">Menu 22</a></li>
+									<li><a href="#">Menu 33</a></li>
+									<li><a href="#">Menu 44</a></li>
+									<li>
+										<a href="#">Menu 55</a>
+										<ul>
+											<li><a href="#">Menu 111</a></li>
+											<li><a href="#">Menu 222</a></li>
+											<li><a href="#">Menu 333</a></li>
+											<li><a href="#">Menu 444</a></li>
+											<li><a href="#">Menu 555</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">Menu 5</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Reservations</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#">Contect</a></li>
+					<li><a href="#">Pages</a></li>
+					<li><a href="#">Shop</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header End -->
+
+	<!-- Banner Start -->
+	<section class="main-banner">
+		<div class="banner">
+			<h2>Welcome to restaurant</h2>
+			<img src="image/banner-icon.png"/>
+			<p>We Create Sweet Memories</p>
+		</div>
+	</section>
+	<!-- Banner End -->
+
+	<!-- Our Story Start -->
+	<section class="our-story-section">
+		<div class="container">
+			<h2>DISCOVER OUR STORY</h2>
+			<div class="our-story">
+				<div class="image">
+					<img src="image/our-story-image-one.png">
+				</div>
+				<div class="details">
+					<img src="image/our-story-icon.png">
+					<h6>Welcome to Majesty</h6>
+					<h3>ART OF FOOD</h3>
+					<p>Majesty is a team work of Majesty Restaurant Cafe, we aim at promoting the foodstuff industry through the branches , we establish and through the new dishes. and integrate between different cultures.</p>
+				</div>
+				<div class="image">
+					<img src="image/our-story-image-two.png">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Our Story End -->
+
+	<!-- Our Services Start -->
+	<section class="our-services-section">
+		<div class="container">
+			<h2>Our Services</h2>
+			<div class="service-list">
+				<div class="service">
+					<img src="image/services-icon-one.png">
+					<h3>Bar</h3>
+					<p>Nullam vel pellentesque tortor, nec ornare enim. Praesent vehicula dapibus diam non Porttitor. Etiam vel elit ante. .</p>
+				</div>
+				<div class="service">
+					<img src="image/services-icon-two.png">
+					<h3>Bar</h3>
+					<p>Nullam vel pellentesque tortor, nec ornare enim. Praesent vehicula dapibus diam non Porttitor. Etiam vel elit ante. .</p>
+				</div>
+				<div class="service">
+					<img src="image/services-icon-three.png">
+					<h3>Bar</h3>
+					<p>Nullam vel pellentesque tortor, nec ornare enim. Praesent vehicula dapibus diam non Porttitor. Etiam vel elit ante. .</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Our Services End -->
+
+	
+</body>
+</html>
